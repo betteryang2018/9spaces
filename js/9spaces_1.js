@@ -12,14 +12,12 @@ var start=byId("start"),
 	arr=new Array(3),  // 创建数组容纳随机数
 	timer=null;
 	
-// 点击开始	
+// 点击开始
 start.onclick=function(){
+	clearInterval(timer);
 	timer=setInterval(function(){
 		startFun();
 	},1000);
-	start.onclick=function(){
-		return;
-	}
 }
 
 // 停止按钮
